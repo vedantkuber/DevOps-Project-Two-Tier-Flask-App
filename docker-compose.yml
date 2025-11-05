@@ -13,7 +13,7 @@ services:
   volumes:
       - mysql-data:/var/lib/mysql
   networks:
-      - two-tier-nt
+      - two-tier
 
   restart: always
   healthcheck:
@@ -37,7 +37,7 @@ services:
       - MYSQL_DB=devops
 
     networks:
-      - two-tier-nt
+      - two-tier
 
     depends_on:
       - mysql
@@ -53,5 +53,5 @@ volumes:
   mysql_data:
 
 networks:
-   tws-tier-nt:
+   tws-tier:
 
