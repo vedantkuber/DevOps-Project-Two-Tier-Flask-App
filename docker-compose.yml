@@ -1,9 +1,9 @@
 version: "3.8"
 
 services:
-  mysql:
+ mysql:
   container_name: mysql
-  image: mysql:latest
+  image: mysql
   environment:
     MYSQL_ROOTPASSWORD: "root"
     MYSQL_DATABASE: "devops"
@@ -13,7 +13,7 @@ services:
   volumes:
       - mysql-data:/var/lib/mysql
   networks:
-      - two-tier
+      - two-tier-nt
 
   restart: always
   healthcheck:
@@ -37,7 +37,7 @@ services:
       - MYSQL_DB=devops
 
     networks:
-      - two-tier
+      - two-tier-nt
 
     depends_on:
       - mysql
@@ -53,5 +53,6 @@ volumes:
   mysql_data:
 
 networks:
-   tws-tier:
+      two-tier-nt:
+
 
