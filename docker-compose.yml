@@ -1,9 +1,9 @@
 version: "3.8"
 
 services:
- mysql:
+  mysql:
   container_name: mysql
-  image: mysql
+  image: mysql:latest
   environment:
     MYSQL_ROOTPASSWORD: "root"
     MYSQL_DATABASE: "devops"
@@ -53,4 +53,5 @@ volumes:
   mysql_data:
 
 networks:
-    tws-tier-nt:
+   tws-tier-nt:
+
