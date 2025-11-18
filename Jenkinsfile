@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t flask-app:latest .'
+                sh 'docker build -t flaskapp:latest .'
             }
         }
         stage('Deploy with Docker Compose') {
